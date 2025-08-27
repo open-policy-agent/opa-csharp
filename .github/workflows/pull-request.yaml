@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Tune GitHub-hosted runner network
         uses: smorimoto/tune-github-hosted-runner-network@v1
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Get Speakeasy version
         id: speakeasy_version
         run: |
@@ -71,7 +71,7 @@ jobs:
     steps:
       - name: Tune GitHub-hosted runner network
         uses: smorimoto/tune-github-hosted-runner-network@v1
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Patch Speakeasy README docs links
         run: ./scripts/patch-readme.sh README.md http://localhost:8000
       - name: Check for any unpatched docs links
@@ -85,7 +85,7 @@ jobs:
     steps:
       - name: Tune GitHub-hosted runner network
         uses: smorimoto/tune-github-hosted-runner-network@v1
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup dotnet
         uses: actions/setup-dotnet@v4
         with:
@@ -103,7 +103,7 @@ jobs:
     steps:
       - name: Tune GitHub-hosted runner network
         uses: smorimoto/tune-github-hosted-runner-network@v1
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup dotnet
         uses: actions/setup-dotnet@v4
         with:
