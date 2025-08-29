@@ -421,7 +421,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task RBACBatchAllSuccessTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var goodInput = new Dictionary<string, object>() {
@@ -452,7 +451,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task RBACBatchMixedTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var goodInput = new Dictionary<string, object>() {
@@ -501,7 +499,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task RBACBatchAllFailuresTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var badInput = new Dictionary<string, object>() {
@@ -655,7 +652,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task RBACBatchGenericAllSuccessTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var goodInput = new Dictionary<string, object>() {
@@ -686,7 +682,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task RBACBatchGenericMixedTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var goodInput = new Dictionary<string, object>() {
@@ -730,7 +725,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task RBACBatchGenericAllFailuresTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var badInput = new Dictionary<string, object>() {
