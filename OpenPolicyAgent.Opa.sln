@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A00923D9-A78
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenPolicyAgent.Opa", "src\OpenPolicyAgent.Opa\OpenPolicyAgent.Opa.csproj", "{2610A805-1724-462C-BDC2-3B79F8CA7005}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FD935A2C-B0CE-4978-8B9A-D9F68077E4AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmokeTest.Tests", "test\SmokeTest.Tests\SmokeTest.Tests.csproj", "{97D6A750-610A-46DF-9C62-456539E60DBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{2610A805-1724-462C-BDC2-3B79F8CA7005}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2610A805-1724-462C-BDC2-3B79F8CA7005}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2610A805-1724-462C-BDC2-3B79F8CA7005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D6A750-610A-46DF-9C62-456539E60DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D6A750-610A-46DF-9C62-456539E60DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D6A750-610A-46DF-9C62-456539E60DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D6A750-610A-46DF-9C62-456539E60DBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2610A805-1724-462C-BDC2-3B79F8CA7005} = {A00923D9-A782-482E-840B-E385304CBDEB}
+		{97D6A750-610A-46DF-9C62-456539E60DBD} = {FD935A2C-B0CE-4978-8B9A-D9F68077E4AC}
 	EndGlobalSection
 EndGlobal
