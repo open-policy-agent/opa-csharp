@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace OpenPolicyAgent.Opa.Filters;
 
 /// <summary>
-/// A data object, used to set Compile API options for Enterprise OPA.
+/// A data object, used to set Compile API options for EOPA.
 /// </summary>
 public class CompileOptions
 {

@@ -112,7 +112,7 @@ public class OpenApiTest : IClassFixture<OPAContainerFixture>, IClassFixture<EOP
     public async Task OpenApiClientBatchPolicyNoInputTest()
     {
         Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
-        // Currently, this API only exists in Enterprise OPA.
+        // Currently, this API only exists in EOPA.
         var client = GetEOpaApiClient();
 
         var req = new ExecuteBatchPolicyWithInputRequest()
@@ -138,7 +138,7 @@ public class OpenApiTest : IClassFixture<OPAContainerFixture>, IClassFixture<EOP
     public async Task OpenApiClientBatchPolicyAllSuccessTest()
     {
         Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
-        // Currently, this API only exists in Enterprise OPA.
+        // Currently, this API only exists in EOPA.
         var client = GetEOpaApiClient();
 
         var req = new ExecuteBatchPolicyWithInputRequest()
@@ -189,7 +189,7 @@ public class OpenApiTest : IClassFixture<OPAContainerFixture>, IClassFixture<EOP
     public async Task OpenApiClientBatchPolicyMixedTest()
     {
         Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
-        // Currently, this API only exists in Enterprise OPA.
+        // Currently, this API only exists in EOPA.
         var client = GetEOpaApiClient();
 
         var req = new ExecuteBatchPolicyWithInputRequest()
@@ -253,7 +253,7 @@ public class OpenApiTest : IClassFixture<OPAContainerFixture>, IClassFixture<EOP
     public async Task OpenApiClientBatchPolicyAllFailureTest()
     {
         Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
-        // Currently, this API only exists in Enterprise OPA.
+        // Currently, this API only exists in EOPA.
         var client = GetEOpaApiClient();
 
         var req = new ExecuteBatchPolicyWithInputRequest()

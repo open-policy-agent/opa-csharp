@@ -15,7 +15,7 @@ namespace OpenPolicyAgent.Opa.OpenApi.Models.Components
     using OpenPolicyAgent.Opa.OpenApi.Utils;
 
     /// <summary>
-    /// Additional options to use during partial evaluation. Only the disableInlining option is currently supported in OPA. Enterprise OPA may support additional options.
+    /// Additional options to use during partial evaluation. Only the disableInlining option is currently supported in OPA. EOPA may support additional options.
     /// </summary>
     public class CompileOptions
     {

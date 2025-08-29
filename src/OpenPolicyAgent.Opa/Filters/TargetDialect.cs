@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 namespace OpenPolicyAgent.Opa.Filters;
 
 /// <summary>
-/// An enum of all data filter formats that Enterprise OPA supports in the Compile API.
+/// An enum of all data filter formats that EOPA supports in the Compile API.
 /// Used in the <c>options.targetDialects</c> payload field, and for <c>Accept</c> header selection.
 /// </summary>
 /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md"/></remarks>
@@ -61,7 +61,7 @@ public static class TargetDialectsExtension
     }
 
     /// <summary>
-    /// Generates an HTTP <c>Accept</c> header string for use with Enterprise OPA's Compile API.
+    /// Generates an HTTP <c>Accept</c> header string for use with EOPA's Compile API.
     /// </summary>
     /// <param name="value">The TargetDialects value to use.</param>
     /// <returns>An <c>Accept</c> header string of the format <c>application/vnd.open-policy-agent.${data_filter_type}+json</c>.</returns>
@@ -83,7 +83,7 @@ public static class TargetDialectsExtension
     }
 
     /// <summary>
-    /// Generates a dialect string for use in Enterprise OPA's Compile API.
+    /// Generates a dialect string for use in EOPA's Compile API.
     /// The string can be used in the <c>options.targetDialects</c> payload field.
     /// </summary>
     /// <param name="value">The TargetDialects value to use.</param>

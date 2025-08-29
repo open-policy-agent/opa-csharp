@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace OpenPolicyAgent.Opa.Filters;
 
 /// <summary>
-/// Mapping between tables and columns for the Enterprise OPA Compile API.
+/// Mapping between tables and columns for the EOPA Compile API.
 /// Used in the <c>options.targetSQLTableMappings</c> payload field.
 /// </summary>
 /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md#request-body"/></remarks>

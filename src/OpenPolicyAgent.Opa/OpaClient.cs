@@ -476,7 +476,7 @@ public class OpaClient
     }
 
     /// <summary>
-    /// Uses Enterprise OPA's Compile API to partially evaluate a data
+    /// Uses EOPA's Compile API to partially evaluate a data
     /// filter policy. Results are returned as a tuple with the members:
     /// <list type="bullet">
     ///     <item>Data Filters (UCAST or SQL)</item>
@@ -506,7 +506,7 @@ public class OpaClient
     }
 
     /// <summary>
-    /// Uses Enterprise OPA's Compile API to partially evaluate a data
+    /// Uses EOPA's Compile API to partially evaluate a data
     /// filter policy. Results are returned as a Dictionary pairing filter types to the generated data filters.
     /// Each data filtering result has the form:
     /// <list type="bullet">

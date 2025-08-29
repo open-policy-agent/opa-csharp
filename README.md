@@ -161,11 +161,11 @@ allowed: False
 
 ### Batched Queries
 
-Enterprise OPA supports executing many queries in a single request with the [Batch API][eopa-batch-api].
+EOPA supports executing many queries in a single request with the [Batch API][eopa-batch-api].
 
-   [eopa-batch-api]: /enterprise-opa/reference/api-reference/batch-api
+   [eopa-batch-api]: https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/batch-api.md
 
-The OPA C# SDK has native support for Enterprise OPA's batch API, with a fallback behavior of sequentially executing single queries if the Batch API is unavailable (such as with open source Open Policy Agent).
+The OPA C# SDK has native support for EOPA's batch API, with a fallback behavior of sequentially executing single queries if the Batch API is unavailable (such as with open source Open Policy Agent).
 
 ```csharp
 using OpenPolicyAgent.Opa;

@@ -7,7 +7,7 @@ using OpenPolicyAgent.Ucast.Linq;
 namespace OpenPolicyAgent.Opa.Filters;
 
 /// <summary>
-/// Wrapper type for the column masking rule objects Enterprise OPA generates alongside data filtering results.
+/// Wrapper type for the column masking rule objects EOPA generates alongside data filtering results.
 /// </summary>
 /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/data-filtering/explanation/column-masks.md"/></remarks>
 public class ColumnMasks : Dictionary<string, Dictionary<string, MaskingFunc>>

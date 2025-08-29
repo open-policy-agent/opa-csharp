@@ -28,7 +28,7 @@ public interface IFilter
 }
 
 /// <summary>
-/// Wrapper type for the UCAST data filters Enterprise OPA generates.
+/// Wrapper type for the UCAST data filters EOPA generates.
 /// See the <see cref="OpenPolicyAgent.Ucast.Linq.UCASTNode" /> docs for details.
 /// </summary>
 public class UCASTFilter : UCASTNode, IFilter
@@ -52,7 +52,7 @@ public class UCASTFilter : UCASTNode, IFilter
 }
 
 /// <summary>
-/// Wrapper type for the SQL data filters Enterprise OPA generates.
+/// Wrapper type for the SQL data filters EOPA generates.
 /// </summary>
 public class SQLFilter : IFilter
 {
@@ -81,7 +81,7 @@ public class SQLFilter : IFilter
 }
 
 /// <summary>
-/// Wrapper type for the multi-target data filters Enterprise OPA generates.
+/// Wrapper type for the multi-target data filters EOPA generates.
 /// </summary>
 public class CompileResultMultiTarget
 {
