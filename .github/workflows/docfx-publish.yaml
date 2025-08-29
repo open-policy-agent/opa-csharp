@@ -23,7 +23,7 @@ concurrency:
 jobs:
   publish-docs:
     env:
-      STYRA_GH_PAGES_URL: https://styrainc.github.io/opa-csharp
+      GH_PAGES_URL: https://open-policy-agent.github.io/opa-csharp
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Patch Speakeasy README docs links
-        run: ./scripts/patch-readme.sh README.md ${{ env.STYRA_GH_PAGES_URL }}
+        run: ./scripts/patch-readme.sh README.md ${{ env.GH_PAGES_URL }}
 
       - name: Dotnet Setup
         uses: actions/setup-dotnet@v4

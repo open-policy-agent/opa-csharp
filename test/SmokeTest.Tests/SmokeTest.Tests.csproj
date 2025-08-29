@@ -26,7 +26,7 @@
 
   <!-- OPA API Reference. -->
   <ItemGroup>
-    <ProjectReference Include="..\..\Styra\Opa\Styra.Opa.csproj" />
+    <ProjectReference Include="..\..\src\OpenPolicyAgent.Opa\OpenPolicyAgent.Opa.csproj" />
   </ItemGroup>
 
   <!-- Ensure our data files are copied next to the test executables. -->

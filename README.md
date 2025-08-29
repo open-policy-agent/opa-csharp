@@ -1,19 +1,19 @@
 # OPA C# SDK
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![NuGet Version](https://img.shields.io/nuget/v/Styra.Opa?style=flat&color=%2324b6e0)](https://www.nuget.org/packages/Styra.Opa/)
+[![NuGet Version](https://img.shields.io/nuget/v/OpenPolicyAgent.Opa?style=flat&color=%2324b6e0)](https://www.nuget.org/packages/OpenPolicyAgent.Opa/)
 
 > [!IMPORTANT]
-> Reference documentation is available at <https://styrainc.github.io/opa-csharp>
+> Reference documentation is available at <https://open-policy-agent.github.io/opa-csharp>
 
-You can use the Styra OPA SDK to connect to [Open Policy Agent](https://www.openpolicyagent.org/) and [Enterprise OPA](https://www.styra.com/enterprise-opa/) deployments.
+You can use the OPA C# SDK to connect to [Open Policy Agent](https://www.openpolicyagent.org/) and [EOPA](https://github.com/open-policy-agent/eopa) deployments.
 
 ## SDK Installation
 
 ### Nuget
 
 ```bash
-dotnet add package Styra.Opa
+dotnet add package OpenPolicyAgent.Opa
 ```
 <!-- No SDK Installation [installation] -->
 
@@ -44,7 +44,7 @@ and this `data.json`:
 For a simple boolean response with input, use the SDK as follows:
 
 ```csharp
-using Styra.Opa;
+using OpenPolicyAgent.Opa;
 
 string opaUrl = "http://localhost:8181";
 OpaClient opa = new OpaClient(opaUrl);
@@ -85,7 +85,7 @@ The `.Evaluate()` method can be used instead of `.Check()` for non-boolean outpu
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Styra.Opa;
+using OpenPolicyAgent.Opa;
 
 var opaUrl = "http://localhost:8181";
 var opa = new OpaClient(opaUrl);
@@ -133,7 +133,7 @@ content of data.roles:
 For evaluating the default rule (configured with your OPA service), use `EvaluateDefault`. `input` is optional, and left out in this example:
 
 ```csharp
-using Styra.Opa;
+using OpenPolicyAgent.Opa;
 
 string opaUrl = "http://localhost:8181";
 OpaClient opa = new OpaClient(opaUrl);
@@ -168,7 +168,7 @@ Enterprise OPA supports executing many queries in a single request with the [Bat
 The OPA C# SDK has native support for Enterprise OPA's batch API, with a fallback behavior of sequentially executing single queries if the Batch API is unavailable (such as with open source Open Policy Agent).
 
 ```csharp
-using Styra.Opa;
+using OpenPolicyAgent.Opa;
 
 string opaUrl = "http://localhost:8181";
 OpaClient opa = new OpaClient(opaUrl);
@@ -220,7 +220,7 @@ Query results, by key:
 
 </details>
 
-See the [API Documentation](https://styrainc.github.io/opa-csharp/api/Styra.Opa.OpenApi.Models.Components.Result.html) for reference on the properties and types available from a result.
+See the [API Documentation](https://open-policy-agent.github.io/opa-csharp/api/OpenPolicyAgent.Opa.OpenApi.Models.Components.Result.html) for reference on the properties and types available from a result.
 
 ### Using Custom Classes for Input and Output
 
@@ -234,7 +234,7 @@ In the example below, note:
 
 ```csharp
 using System;
-using Styra.Opa;
+using OpenPolicyAgent.Opa;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -316,7 +316,7 @@ Here's a quick example:
 
 ```csharp
 using Microsoft.Extensions.Logging;
-using Styra.Opa;
+using OpenPolicyAgent.Opa;
 
 internal class Program
 {
@@ -341,9 +341,9 @@ internal class Program
     <summary>Result</summary>
 
 ```log
-info: Styra.Opa.OpaClient[0]
+info: OpenPolicyAgent.Opa.OpaClient[0]
       Initialized an OPA client for the OPA at: http://localhost:8181.
-warn: Styra.Opa.OpaClient[2066302899]
+warn: OpenPolicyAgent.Opa.OpaClient[2066302899]
       executing policy at 'this/rule/does/not/exist' succeeded, but OPA did not reply with a result
 Unhandled exception. OpaException: executing policy at 'this/rule/does/not/exist' succeeded, but OPA did not reply with a result
     ...
@@ -361,7 +361,7 @@ Unhandled exception. OpaException: executing policy at 'this/rule/does/not/exist
 <!-- Start Summary [summary] -->
 ## Summary
 
-For more information about the API: [Enterprise OPA documentation](https://docs.styra.com/enterprise-opa)
+For more information about the API: [EOPA documentation](https://github.com/open-policy-agent/eopa/docs)
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -386,8 +386,8 @@ For more information about the API: [Enterprise OPA documentation](https://docs.
 ### Example 1
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
 
 var sdk = new OpaApiClient();
 
@@ -405,8 +405,8 @@ var res = await sdk.ExecuteDefaultPolicyWithInputAsync(
 ### Example 2
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Requests;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Requests;
 
 var sdk = new OpaApiClient();
 
@@ -427,9 +427,9 @@ var res = await sdk.ExecutePolicyWithInputAsync(req);
 ### Example 3
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
-using Styra.Opa.OpenApi.Models.Requests;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi.Models.Requests;
 using System.Collections.Generic;
 
 var sdk = new OpaApiClient();
@@ -477,8 +477,8 @@ var res = await sdk.ExecuteBatchPolicyWithInputAsync(req);
 The default server can be overridden globally by passing a URL to the `serverUrl: string` optional parameter when initializing the SDK client instance. For example:
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
 
 var sdk = new OpaApiClient(serverUrl: "http://localhost:8181");
 
@@ -499,7 +499,7 @@ var res = await sdk.ExecuteDefaultPolicyWithInputAsync(
 
 Handling errors in this SDK should largely match your expectations. All operations return a response object or throw an exception.
 
-By default, an API error will raise a `Styra.Opa.OpenApi.Models.Errors.SDKException` exception, which has the following properties:
+By default, an API error will raise a `OpenPolicyAgent.Opa.OpenApi.Models.Errors.SDKException` exception, which has the following properties:
 
 | Property      | Type                  | Description           |
 |---------------|-----------------------|-----------------------|
@@ -512,16 +512,16 @@ When custom error responses are specified for an operation, the SDK may also thr
 
 | Error Type                                   | Status Code | Content Type     |
 | -------------------------------------------- | ----------- | ---------------- |
-| Styra.Opa.OpenApi.Models.Errors.ClientError  | 400, 404    | application/json |
-| Styra.Opa.OpenApi.Models.Errors.ServerError  | 500         | application/json |
-| Styra.Opa.OpenApi.Models.Errors.SDKException | 4XX, 5XX    | \*/\*            |
+| OpenPolicyAgent.Opa.OpenApi.Models.Errors.ClientError  | 400, 404    | application/json |
+| OpenPolicyAgent.Opa.OpenApi.Models.Errors.ServerError  | 500         | application/json |
+| OpenPolicyAgent.Opa.OpenApi.Models.Errors.SDKException | 4XX, 5XX    | \*/\*            |
 
 ### Example
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
-using Styra.Opa.OpenApi.Models.Errors;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi.Models.Errors;
 
 var sdk = new OpaApiClient();
 
@@ -549,7 +549,7 @@ catch (Exception ex)
         // Handle exception data
         throw;
     }
-    else if (ex is Styra.Opa.OpenApi.Models.Errors.SDKException)
+    else if (ex is OpenPolicyAgent.Opa.OpenApi.Models.Errors.SDKException)
     {
         // Handle default exception
         throw;
@@ -572,8 +572,8 @@ This SDK supports the following security scheme globally:
 To authenticate with the API the `BearerAuth` parameter must be set when initializing the SDK client instance. For example:
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
 
 var sdk = new OpaApiClient(bearerAuth: "<YOUR_BEARER_TOKEN_HERE>");
 
@@ -593,5 +593,5 @@ var res = await sdk.ExecuteDefaultPolicyWithInputAsync(
 
 ## Community
 
-For questions, discussions and announcements related to Styra products, services and open source projects, please join
-the Styra community on [Slack](https://communityinviter.com/apps/styracommunity/signup)!
+For questions, discussions and announcements, please join
+the OPA community on [Slack](https://slack.openpolicyagent.org/)!

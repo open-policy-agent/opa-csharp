@@ -1,8 +1,8 @@
-﻿using Styra.Opa;
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
-using Styra.Opa.OpenApi.Models.Errors;
-using Styra.Opa.OpenApi.Models.Requests;
+﻿using OpenPolicyAgent.Opa;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi.Models.Errors;
+using OpenPolicyAgent.Opa.OpenApi.Models.Requests;
 
 namespace SmokeTest.Tests;
 

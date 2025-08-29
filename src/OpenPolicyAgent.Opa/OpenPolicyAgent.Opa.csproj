@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>OpenPolicyAgent.Opa</PackageId>
+    <Version>1.5.4</Version>
+    <Authors>The OPA Authors</Authors>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1591</NoWarn>
+    <RepositoryUrl>https://github.com/open-policy-agent/opa-csharp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/open-policy-agent/opa-csharp</PackageProjectUrl>
+    <PackageLicenseExpression>APACHE-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <None Include="../../docs/*" Pack="true" PackagePath="/docs" />
+
+    <PackageReference Include="newtonsoft.json" Version="13.0.3" />
+    <PackageReference Include="nodatime" Version="3.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.8" />
+    <PackageReference Include="OpenPolicyAgent.Ucast.Linq" Version="0.7.0" />
+  </ItemGroup>
+</Project>

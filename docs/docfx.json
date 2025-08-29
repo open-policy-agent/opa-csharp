@@ -17,8 +17,8 @@
       }
     ],
     "globalMetadata": {
-      "_appName": "Styra C# SDK",
-      "_appTitle": "Styra C# SDK",
+      "_appName": "OPA C# SDK",
+      "_appTitle": "OPA C# SDK",
       "_enableSearch": true,
       "pdf": false
     },
@@ -43,7 +43,7 @@
           "files": [
             "*.csproj"
           ],
-          "src": "../Styra/Opa"
+          "src": "../src/OpenPolicyAgent.Opa"
         }
       ]
     }
