@@ -1,4 +1,4 @@
-# Styra.Opa.OpenApi
+# OpenPolicyAgent.Opa.OpenApi
 
 
 <!-- Start SDK Example Usage [usage] -->
@@ -7,8 +7,8 @@
 ### Example 1
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
 
 var sdk = new OpaApiClient();
 
@@ -26,8 +26,8 @@ var res = await sdk.ExecuteDefaultPolicyWithInputAsync(
 ### Example 2
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Requests;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Requests;
 
 var sdk = new OpaApiClient();
 
@@ -48,9 +48,9 @@ var res = await sdk.ExecutePolicyWithInputAsync(req);
 ### Example 3
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
-using Styra.Opa.OpenApi.Models.Requests;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi.Models.Requests;
 using System.Collections.Generic;
 
 var sdk = new OpaApiClient();
@@ -77,7 +77,7 @@ var res = await sdk.ExecuteBatchPolicyWithInputAsync(req);
 
 Handling errors in this SDK should largely match your expectations. All operations return a response object or throw an exception.
 
-By default, an API error will raise a `Styra.Opa.OpenApi.Models.Errors.SDKException` exception, which has the following properties:
+By default, an API error will raise a `OpenPolicyAgent.Opa.OpenApi.Models.Errors.SDKException` exception, which has the following properties:
 
 | Property      | Type                  | Description           |
 |---------------|-----------------------|-----------------------|
@@ -90,16 +90,16 @@ When custom error responses are specified for an operation, the SDK may also thr
 
 | Error Type                                   | Status Code | Content Type     |
 | -------------------------------------------- | ----------- | ---------------- |
-| Styra.Opa.OpenApi.Models.Errors.ClientError  | 400, 404    | application/json |
-| Styra.Opa.OpenApi.Models.Errors.ServerError  | 500         | application/json |
-| Styra.Opa.OpenApi.Models.Errors.SDKException | 4XX, 5XX    | \*/\*            |
+| OpenPolicyAgent.Opa.OpenApi.Models.Errors.ClientError  | 400, 404    | application/json |
+| OpenPolicyAgent.Opa.OpenApi.Models.Errors.ServerError  | 500         | application/json |
+| OpenPolicyAgent.Opa.OpenApi.Models.Errors.SDKException | 4XX, 5XX    | \*/\*            |
 
 ### Example
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
-using Styra.Opa.OpenApi.Models.Errors;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi.Models.Errors;
 
 var sdk = new OpaApiClient();
 
@@ -127,7 +127,7 @@ catch (Exception ex)
         // Handle exception data
         throw;
     }
-    else if (ex is Styra.Opa.OpenApi.Models.Errors.SDKException)
+    else if (ex is OpenPolicyAgent.Opa.OpenApi.Models.Errors.SDKException)
     {
         // Handle default exception
         throw;
@@ -143,8 +143,8 @@ catch (Exception ex)
 
 The default server can be overridden globally by passing a URL to the `serverUrl: string` optional parameter when initializing the SDK client instance. For example:
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
 
 var sdk = new OpaApiClient(serverUrl: "http://localhost:8181");
 
@@ -173,8 +173,8 @@ This SDK supports the following security scheme globally:
 
 To authenticate with the API the `BearerAuth` parameter must be set when initializing the SDK client instance. For example:
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
 
 var sdk = new OpaApiClient(bearerAuth: "<YOUR_BEARER_TOKEN_HERE>");
 

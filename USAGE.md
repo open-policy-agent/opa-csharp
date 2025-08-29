@@ -1,7 +1,7 @@
 <!-- Start SDK Example Usage [usage] -->
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
 
 var sdk = new OpaApiClient();
 
@@ -17,8 +17,8 @@ var res = await sdk.ExecuteDefaultPolicyWithInputAsync(
 ```
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Requests;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Requests;
 
 var sdk = new OpaApiClient();
 
@@ -37,9 +37,9 @@ var res = await sdk.ExecutePolicyWithInputAsync(req);
 ```
 
 ```csharp
-using Styra.Opa.OpenApi;
-using Styra.Opa.OpenApi.Models.Components;
-using Styra.Opa.OpenApi.Models.Requests;
+using OpenPolicyAgent.Opa.OpenApi;
+using OpenPolicyAgent.Opa.OpenApi.Models.Components;
+using OpenPolicyAgent.Opa.OpenApi.Models.Requests;
 using System.Collections.Generic;
 
 var sdk = new OpaApiClient();

@@ -3,7 +3,7 @@
 ## Project structure
 
 Currently, the project is split carefully between two Solution files:
- - `Styra.sln`
+ - `OpenPolicyAgent.Opa.sln`
  - `test/test.sln`
 
 This is intentional, because it is currently the most convenient way to prevent development/testing dependencies from accidentally being included into our NuGet package builds.
@@ -43,7 +43,7 @@ To get the local docs site up and running, try the following invocation:
 
 An example of the sorts of replacement operations that happen:
  - Speakeasy markdown relative link: `docs/sdks/opaapiclient/README.md#executepolicy`
- - Equivalent DocFX URL: `$<HOST>/api/Styra.Opa.OpenApi.OpaApiClient.html#Styra_Opa_OpenApi_OpaApiClient_ExecutePolicyAsync_Styra_Opa_OpenApi_Models_Requests_ExecutePolicyRequest_`
+ - Equivalent DocFX URL: `$<HOST>/api/OpenPolicyAgent.Opa.OpenApi.OpaApiClient.html#OpenPolicyAgent_Opa_OpenApi_OpaApiClient_ExecutePolicyAsync_OpenPolicyAgent_Opa_OpenApi_Models_Requests_ExecutePolicyRequest_`
 
 This is obviously not trivial to reverse engineer, so we update the links by hand for now.
 The manual updating works well enough because these APIs are fairly stable for now, and only need updating when one of the referenced method signatures changes.
