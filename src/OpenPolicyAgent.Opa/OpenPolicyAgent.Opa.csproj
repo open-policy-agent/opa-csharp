@@ -11,7 +11,7 @@
     <NoWarn>1591</NoWarn>
     <RepositoryUrl>https://github.com/open-policy-agent/opa-csharp</RepositoryUrl>
     <PackageProjectUrl>https://github.com/open-policy-agent/opa-csharp</PackageProjectUrl>
-    <PackageLicenseExpression>APACHE-2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
