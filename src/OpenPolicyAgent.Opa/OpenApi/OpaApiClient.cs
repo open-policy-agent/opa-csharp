@@ -665,7 +665,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultJSON = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.multitarget+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.multitarget+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultMultitarget>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -677,7 +677,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultMultitarget = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.ucast.all+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.ucast.all+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultUCAST>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -689,7 +689,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultUCAST = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.ucast.linq+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.ucast.linq+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultUCAST>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -701,7 +701,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultUCAST = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.ucast.minimal+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.ucast.minimal+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultUCAST>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -713,7 +713,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultUCAST = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.ucast.prisma+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.ucast.prisma+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultUCAST>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -725,7 +725,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultUCAST = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.sql.mysql+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.sql.mysql+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultSQL>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -737,7 +737,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultSQL = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.sql.postgresql+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.sql.postgresql+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultSQL>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -749,7 +749,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultSQL = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.sql.sqlite+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.sql.sqlite+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultSQL>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()
@@ -761,7 +761,7 @@ namespace OpenPolicyAgent.Opa.OpenApi
                     response.CompileResultSQL = obj;
                     return response;
                 }
-                else if (Utilities.IsContentTypeMatch("application/vnd.open-policy-agent.sql.sqlserver+json", contentType))
+                else if (Utilities.IsContentTypeMatch("application/vnd.opa.sql.sqlserver+json", contentType))
                 {
                     var obj = ResponseBodyDeserializer.Deserialize<CompileResultSQL>(await httpResponse.Content.ReadAsStringAsync(), NullValueHandling.Ignore);
                     var response = new CompileQueryWithPartialEvaluationResponse()

@@ -64,20 +64,20 @@ public static class TargetDialectsExtension
     /// Generates an HTTP <c>Accept</c> header string for use with EOPA's Compile API.
     /// </summary>
     /// <param name="value">The TargetDialects value to use.</param>
-    /// <returns>An <c>Accept</c> header string of the format <c>application/vnd.open-policy-agent.${data_filter_type}+json</c>.</returns>
+    /// <returns>An <c>Accept</c> header string of the format <c>application/vnd.opa.${data_filter_type}+json</c>.</returns>
     /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md#accept-header--controlling-the-target-response-format"/></remarks>
     public static string ToAcceptHeader(this TargetDialects value)
     {
         return value switch
         {
-            TargetDialects.UcastAll => "application/vnd.open-policy-agent.ucast.all+json",
-            TargetDialects.UcastMinimal => "application/vnd.open-policy-agent.ucast.minimal+json",
-            TargetDialects.UcastPrisma => "application/vnd.open-policy-agent.ucast.prisma+json",
-            TargetDialects.UcastLinq => "application/vnd.open-policy-agent.ucast.linq+json",
-            TargetDialects.SqlSqlserver => "application/vnd.open-policy-agent.sql.sqlserver+json",
-            TargetDialects.SqlMysql => "application/vnd.open-policy-agent.sql.mysql+json",
-            TargetDialects.SqlPostgresql => "application/vnd.open-policy-agent.sql.postgresql+json",
-            TargetDialects.SqlSqlite => "application/vnd.open-policy-agent.sql.sqlite+json",
+            TargetDialects.UcastAll => "application/vnd.opa.ucast.all+json",
+            TargetDialects.UcastMinimal => "application/vnd.opa.ucast.minimal+json",
+            TargetDialects.UcastPrisma => "application/vnd.opa.ucast.prisma+json",
+            TargetDialects.UcastLinq => "application/vnd.opa.ucast.linq+json",
+            TargetDialects.SqlSqlserver => "application/vnd.opa.sql.sqlserver+json",
+            TargetDialects.SqlMysql => "application/vnd.opa.sql.mysql+json",
+            TargetDialects.SqlPostgresql => "application/vnd.opa.sql.postgresql+json",
+            TargetDialects.SqlSqlite => "application/vnd.opa.sql.sqlite+json",
             _ => "application/json",
         };
     }

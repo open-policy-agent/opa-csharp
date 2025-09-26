@@ -728,7 +728,7 @@ public class OpaClient
         string acceptHeader = targetDialects.Count switch
         {
             1 => targetDialects[0].ToAcceptHeader(),
-            _ => "application/vnd.open-policy-agent.multitarget+json",
+            _ => "application/vnd.opa.multitarget+json",
         };
 
         // Serialize request object to JSON
