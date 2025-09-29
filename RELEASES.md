@@ -1,4 +1,9 @@
 
+## v1.6.1
+
+This release contains release engineering fixes, with no significant code or dependency changes.
+
+
 ## v1.6.0
 
 This release is the first official project release since the project was donated to the Open Policy Agent organization on Github.
@@ -12,7 +17,7 @@ The repo now publishes to [`OpenPolicyAgent.Opa`](https://www.nuget.org/packages
 This release includes breaking changes for the Compile API `GetFilters` APIs, and should be used with OPA v1.9.0 or later, and EOPA v1.44.0 or later.
 These changes were needed in order to track upstream support of filter compilation landing in OPA.
 
------s
+-----
 
 ## Older Releases
 
