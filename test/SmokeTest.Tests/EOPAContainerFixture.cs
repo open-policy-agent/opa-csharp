@@ -19,14 +19,12 @@ public class EOPAContainerFixture : IAsyncLifetime
             "testdata/filters/filters.rego",
             "testdata/filters/roles.json"
         };
-        string[] opaCmd = ["run", "--server", "--addr=0.0.0.0:8181", "--disable-telemetry"];
+        string[] opaCmd = ["run", "--server", "--addr=0.0.0.0:8181"];
         var startupCommand = new List<string>().Concat(opaCmd).Concat(startupFiles).ToArray();
 
         // Create a new instance of a container.
         var container = new ContainerBuilder()
           .WithImage("ghcr.io/open-policy-agent/eopa:latest")
-          .WithEnvironment("EOPA_LICENSE_TOKEN", Environment.GetEnvironmentVariable("EOPA_LICENSE_TOKEN"))
-          .WithEnvironment("EOPA_LICENSE_KEY", Environment.GetEnvironmentVariable("EOPA_LICENSE_KEY"))
           // Bind port 8181 of the container to a random port on the host.
           .WithPortBinding(8181, true)
           .WithCommand(startupCommand)

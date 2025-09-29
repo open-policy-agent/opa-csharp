@@ -866,7 +866,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task GetFiltersTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var (filters, masks) = await client.GetFilters("filters/include", new Dictionary<string, object>
@@ -918,7 +917,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task GetFiltersWithMasksTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     // Result here should be identical to the filters-oriented test, but our
@@ -946,7 +944,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task GetFiltersMultiTargetTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     var (filters, masks) = await client.GetMultipleFilters("filters/include", new Dictionary<string, object>()
@@ -1012,7 +1009,6 @@ public class HighLevelTest : IClassFixture<OPAContainerFixture>, IClassFixture<E
   [Fact]
   public async Task GetFiltersMultiTargetWithMasksTest()
   {
-    Assert.SkipWhen(NoEOPALicenseEnvVarsFound(), "No EOPA license variables provided at test launch time.");
     var client = GetEOpaClient();
 
     // Result here should be identical to the filters-oriented test, but our
