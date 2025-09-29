@@ -1,4 +1,4 @@
-name: 3b – Publish Docs
+name: Publish Docs
 
 # Trigger the action on push to main
 on:
