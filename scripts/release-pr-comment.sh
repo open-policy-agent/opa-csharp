@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Script to create or update a PR comment with a unique marker
-# Usage: release-pr-comment.sh <repo> <pr_number> <comment_body> [marker]
+# Usage: release-pr-comment.sh <repo> <pr_number> [marker]
 
 set -e  # Exit on any error
 
@@ -30,6 +30,8 @@ fi
 REPO="$1"
 PR_NUMBER="$2"
 MARKER="${3:-<!-- auto-comment -->}"
+
+echo "DEBUG: $COMMENT_BODY"
 
 # Get comment body from environment variable or stdin
 if [ -n "$COMMENT_BODY" ]; then
