@@ -5,11 +5,11 @@ set -e
 
 usage() {
     echo "Usage:" >&2
-    echo "  get-csproj-version.sh <FILE>" >&2
+    echo "  $0 <FILE>" >&2
 }
 
 # Ensure README file exists.
-if [ ! -f $1 ]; then
+if [ $# -lt 1 ] || [ ! -f $1 ]; then
     echo "File '$1' not found!" >&2
     usage
     exit 1

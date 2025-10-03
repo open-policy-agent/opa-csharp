@@ -1,10 +1,19 @@
+# Change Log
 
-## v1.6.1
+All notable changes to this project will be documented in this file. This
+project adheres to [Semantic Versioning](http://semver.org/).
+
+## Unreleased
+
+This release contains release engineering improvements, including support for publishing Github Releases again.
+
+
+## 1.6.1
 
 This release contains release engineering fixes, with no significant code or dependency changes.
 
 
-## v1.6.0
+## 1.6.0
 
 This release is the first official project release since the project was donated to the Open Policy Agent organization on Github.
 
