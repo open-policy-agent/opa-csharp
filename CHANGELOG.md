@@ -5,6 +5,9 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+
+## 1.6.2
+
 This release contains release engineering improvements, including support for publishing Github Releases again.
 
 
