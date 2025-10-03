@@ -8,7 +8,7 @@ namespace OpenPolicyAgent.Opa.Filters;
 /// An enum of all data filter formats that EOPA supports in the Compile API.
 /// Used in the <c>options.targetDialects</c> payload field, and for <c>Accept</c> header selection.
 /// </summary>
-/// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md"/></remarks>
+/// <remarks>See: <see href="https://www.openpolicyagent.org/docs/rest-api#compile-api"/></remarks>
 public enum TargetDialects
 {
     [JsonProperty("ucast+all")]
@@ -65,7 +65,7 @@ public static class TargetDialectsExtension
     /// </summary>
     /// <param name="value">The TargetDialects value to use.</param>
     /// <returns>An <c>Accept</c> header string of the format <c>application/vnd.opa.${data_filter_type}+json</c>.</returns>
-    /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md#accept-header--controlling-the-target-response-format"/></remarks>
+    /// <remarks>See: <see href="https://www.openpolicyagent.org/docs/rest-api#accept-header--controlling-the-target-response-format"/></remarks>
     public static string ToAcceptHeader(this TargetDialects value)
     {
         return value switch
@@ -88,7 +88,7 @@ public static class TargetDialectsExtension
     /// </summary>
     /// <param name="value">The TargetDialects value to use.</param>
     /// <returns>A dialect string for the <c>options.targetDialects</c> payload field.</returns>
-    /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md#request-body"/></remarks>
+    /// <remarks>See: <see href="https://www.openpolicyagent.org/docs/rest-api#request-body-1"/></remarks>
     public static string ToOptionString(this TargetDialects value)
     {
         return value switch

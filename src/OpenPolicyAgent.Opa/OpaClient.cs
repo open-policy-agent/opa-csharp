@@ -491,7 +491,7 @@ public class OpaClient
     /// <param name="jsonSerializerSettings">The Newtonsoft.Json.JsonSerializerSettings object to use for round-tripping the input through JSON serdes. (default: global serializer settings, if any)</param>
     /// <returns>A ValueTuple of data filters (UCAST nodes or SQL) and column masking rules (if present).</returns>
     /// <exception cref="OpaException"></exception>
-    /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md"/></remarks>
+    /// <remarks>See: <see href="https://www.openpolicyagent.org/docs/rest-api#compile-api"/></remarks>
     public async Task<(IFilter, ColumnMasks?)> GetFilters(string path, object? input, List<string>? unknowns = null, Filters.TargetSQLTableMappings? tableMappings = null, Filters.TargetDialects targetDialect = Filters.TargetDialects.UcastLinq, JsonSerializerSettings? jsonSerializerSettings = null)
     {
         if (input is null)
@@ -523,7 +523,7 @@ public class OpaClient
     /// <param name="jsonSerializerSettings">The Newtonsoft.Json.JsonSerializerSettings object to use for round-tripping the input through JSON serdes. (default: global serializer settings, if any)</param>
     /// <returns>A ValueTuple of data filters (UCAST nodes or SQL) and column masking rules (if present).</returns>
     /// <exception cref="OpaException"></exception>
-    /// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md"/></remarks>
+    /// <remarks>See: <see href="https://www.openpolicyagent.org/docs/rest-api#compile-api"/></remarks>
     public async Task<(Dictionary<string, IFilter>, ColumnMasks?)> GetMultipleFilters(string path, object? input, List<string>? unknowns = null, Filters.TargetSQLTableMappings? tableMappings = null, List<Filters.TargetDialects>? targetDialects = null, JsonSerializerSettings? jsonSerializerSettings = null)
     {
         if (input is null)
