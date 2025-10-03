@@ -6,7 +6,7 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 
 
-## 1.6.2, 1.6.3, 1.6.4
+## 1.6.2, 1.6.3, 1.6.4, 1.6.5
 
 These releases contain release engineering fixes, with no significant code or dependency changes. contains release engineering improvements, including support for publishing Github Releases again.
 
