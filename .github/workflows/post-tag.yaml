@@ -75,7 +75,7 @@ jobs:
 
   github-release:
     name: Push Github Release
-    needs: [release-build, release-build-darwin]
+    needs: [build]
     runs-on: ubuntu-latest
     permissions:
       contents: write
