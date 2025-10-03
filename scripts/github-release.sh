@@ -29,9 +29,9 @@ for i in "$@"; do
     esac
 done
 
-# Collect a list of opa binaries (expect binaries in the form: opa_<platform>_<arch>[extension])
+# Collect a list of artifacts (expect binaries in the form: artifacts_<platform>_<arch>[extension])
 ASSETS=()
-for asset in "${ASSET_DIR}"/opa_*_*; do
+for asset in "${ASSET_DIR}"/artifacts*; do
     ASSETS+=("$asset")
 done
 
@@ -42,7 +42,7 @@ RELEASE_NOTES="release-notes.md"
 echo -e "${TAG_NAME}\n" > "${RELEASE_NOTES}"
 
 # Fill in the description
-./build/latest-release-notes.sh --output="${RELEASE_NOTES}"
+./scripts/latest-release-notes.sh --output="${RELEASE_NOTES}"
 
 # Update or create a release on github
 if gh release view "${TAG_NAME}" --repo $REPO > /dev/null; then
