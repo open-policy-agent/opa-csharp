@@ -31,7 +31,7 @@ done
 
 # Collect a list of artifacts (expect binaries in the form: artifacts_<platform>_<arch>[extension])
 ASSETS=()
-for asset in "${ASSET_DIR}"/artifacts*; do
+for asset in "${ASSET_DIR}"/*.nupkg; do
     ASSETS+=("$asset")
 done
 
