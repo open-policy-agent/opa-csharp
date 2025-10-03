@@ -2,7 +2,7 @@
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <PackageId>OpenPolicyAgent.Opa</PackageId>
-    <Version>1.6.3</Version>
+    <Version>1.6.4</Version>
     <Authors>The OPA Authors</Authors>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>

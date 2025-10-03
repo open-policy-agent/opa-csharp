@@ -67,9 +67,6 @@ jobs:
           merge-multiple: true
           path: ${{ env.NuGetDirectory }}
 
-      - name: Pack
-        run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }} --no-build
-
       - name: Publish NuGet package
         run: ./scripts/publish-nuget.sh "${{ env.NuGetDirectory }}" "${{ secrets.NUGET_API_KEY }}"
 
@@ -97,11 +94,8 @@ jobs:
           merge-multiple: true
           path: ${{ env.NuGetDirectory }}
 
-      - name: Prepare release notes
-        run: ./scripts/latest-release-notes.sh --output=release-notes.md
-
       - name: Create or Update Release
         env:
           # Required for the GitHub CLI
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./scripts/github-release.sh --asset-dir=$(make release-dir) --tag=${TAG_NAME}
+        run: ./scripts/github-release.sh --asset-dir=${{ env.NuGetDirectory }} --tag=${TAG_NAME}
