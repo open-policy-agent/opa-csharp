@@ -5,10 +5,14 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 1.6.6
+
+This release updates the help text hints for Data Filters to point at the upstream OPA Compile API documentation.
+
 
 ## 1.6.2, 1.6.3, 1.6.4, 1.6.5
 
-These releases contain release engineering fixes, with no significant code or dependency changes. contains release engineering improvements, including support for publishing Github Releases again.
+These releases release engineering improvements, including support for publishing Github Releases again.
 
 
 ## 1.6.1

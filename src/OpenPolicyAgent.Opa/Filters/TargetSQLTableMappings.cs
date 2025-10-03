@@ -7,7 +7,7 @@ namespace OpenPolicyAgent.Opa.Filters;
 /// Mapping between tables and columns for the EOPA Compile API.
 /// Used in the <c>options.targetSQLTableMappings</c> payload field.
 /// </summary>
-/// <remarks>See: <see href="https://github.com/open-policy-agent/eopa/blob/main/docs/eopa/reference/api-reference/partial-evaluation-api.md#request-body"/></remarks>
+/// <remarks>See: <see href="https://www.openpolicyagent.org/docs/rest-api#request-body-1"/></remarks>
 public class TargetSQLTableMappings
 {
     [JsonProperty("sqlserver")]
